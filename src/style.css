@@ -1,0 +1,197 @@
+*{
+    margin: 0 ;
+}
+
+@media screen and
+(min-width:700px){
+    nav ul{
+        display:flex;
+        justify-content: space-around;
+    }
+}
+
+/* navegador*/
+
+.menu-font-std ul{
+    list-style:none;
+    display:flex;
+    background-color: rgb(10, 10, 10);
+}
+
+h1 {
+    color: rgb(243, 206, 39);
+    background-color: rgb(10, 10, 10);
+    text-align: center;
+    font-family:fantasy;
+    padding: 2px;
+}
+
+.menu-font-std li{
+    border-right:1px solid #fff;
+    text-align:center;
+    flex-grow:1;
+}
+
+.menu-font-std li:hover{
+    background:rgb(251, 255, 35);
+    border-color: solid 1em black;
+    font-family:fantasy;
+    cursor:pointer;
+}
+
+.menu-font-std li a{
+    display:block;
+    padding:15px 20px;
+    color:rgb(243, 206, 39);
+    font-family:fantasy;
+    font-weight:normal;
+}
+
+.menu-font-std li a:hover{
+    color:rgb(8, 8, 8);
+}
+
+/* barra de filtrados */
+.menu2 {
+    width: auto;
+    height: auto;
+    max-width: 95%;
+    border-radius: 0.4em;
+    text-align: center;
+    font-family: 'Lucida Sans Unicode';
+    margin: 20px 0px 0px 20px;
+    border:0.3em solid;
+    border-color: #f5f5f580;
+}
+
+/* contenedores de index e inicio*/
+
+.backgray,.contenedor  {
+    background-color: #f5f5f580;
+}
+
+.contenedor {
+    width: 40vw;
+    height: 40vh;
+    border-radius: 20px;
+    margin: 20px 20px 20px 20px;
+    margin-inline: 25%;
+    text-align: center;
+    padding: 60px;
+    align-content: space-between;
+    display: block;
+}
+
+.btn-go {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    position: relative;
+    background-color: #f5f5f580;
+    margin-top: 40px;
+}
+
+.btn-top {
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    position: fixed;
+}
+
+.button:hover, .btn-go:hover {
+    text-decoration: none;
+    color: #4769ff;
+    background-color: #f5f5f5cc;
+    transform: scale(1.08);
+}
+
+/*estilos de card*/
+
+.main-poke {
+    width: auto;
+    height: auto;
+    max-width: 95%;
+    border-radius: 20px;
+    right: 100px;
+    text-align: center;
+    align-content: space-between;
+    font-family: 'Lucida Sans Unicode';
+    display: flex;
+    align-self: center;
+    margin: 20px;
+    margin-left: 120px;
+    padding: 20px;
+}
+
+.column, .column-modal {
+    align-content: center;
+    margin: 10px;
+    font-family: Arial;
+    border-radius: 20px;
+    border-color: silver;
+    float: left;
+    width: 160px;
+    height: auto;
+    max-height: 680px;
+    padding: 10px;
+}
+
+.column {
+    min-width: fit-content;
+}
+
+.column-modal {
+    width: 270px;
+}
+
+.column:hover, .column-modal:hover {
+    background-color: whitesmoke;
+    border-color: silver;
+    cursor: pointer;
+}
+
+
+.numePoke {
+    margin: 0;
+    font-size: 1em;
+    background-color: rgb(238, 255, 0);
+    width: 22%;
+    margin-right: auto;
+    border-radius: 0.4em;
+}
+
+.namePoke {
+    text-transform: capitalize;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: rgb(238, 255, 0);
+    border-radius: 0.4em;
+    color: rgb(2, 0, 124);
+    margin: 0.5em;
+}
+
+/*footer*/
+.footer2 {
+    font-size: 20px;
+    font-family:fantasy;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:black;
+    color: rgb(243, 206, 39);
+    text-align: center;
+    padding: 10px;
+}
+
+.footer1{
+    font-size: 20px;
+    font-family:fantasy;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:black;
+    color: rgb(243, 206, 39);
+    text-align: center;
+    padding: 10px;
+}
