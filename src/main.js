@@ -4,7 +4,7 @@ from './data.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(selectName,selectFilter,selectWeak,calc, data);
+//console.log(selectName,selectFilter,selectWeak,calc, data);
 
 // redirecciona a los botones a las paginas
 document.getElementById("btn-top").onclick = () => (window.open("inicio.html", "_self"));
@@ -12,9 +12,9 @@ document.getElementById("home").onclick = () => (window.open("index.html", "_sel
 document.getElementById("play").onclick = () => (window.open("https://www.pokemongo.com/es-la/"));
 
 //funcion para los cards,llamando a imagenen name numero y size
-function pokemonImage(idPoke, array) {
-    const way = array[idPoke];
-    console.log(way,'pokemon');
+function pokemonImage(idPoke, arrayPoke) {
+    const way = arrayPoke[idPoke];
+  //  console.log(way,'pokemon');
     let box = `
         <div class="column pokemon backgray" id="pokemon${way.num}" data-id="${way.num}" >
         <p class="numePoke">${way.num}</p>
@@ -26,15 +26,15 @@ function pokemonImage(idPoke, array) {
     return box;
 }
 
-const imageHtml = (array) => {
+const imageHtml = (arrayPoke) => {
     let htmlCards = '';
-    for (let i = 0; i < array.length; i++) {
-        console.log("htmlCards");
-htmlCards += pokemonImage(i, array)
+    for (let i = 0; i < arrayPoke.length; i++) {
+       // console.log("htmlCards");
+htmlCards += pokemonImage(i, arrayPoke)
     }
     document.getElementById("div-pokes").innerHTML += htmlCards;
 }
-//ejecutando la funcion
+
 imageHtml(data.pokemon);
 
 
@@ -44,7 +44,7 @@ const loadModal = () => {
 for (const pokemon of pokemons) {
     pokemon.onclick = () => {
     const id = pokemon.getAttribute("data-id");
-    console.log(id);
+    //console.log(id);
     openModal(id)
     };
 }
@@ -53,18 +53,19 @@ loadModal();
 
 const openModal = (index) => {
 const way = data.pokemon.find(pokemon => pokemon.num== index)
-console.log(way);
+//console.log(way);
+// class="column-modal backgray" por class="extras"
 let box2 = `
-    <div class="column-modal backgray" >
+    <div class="extras" >
     <img src=${way.img}>
-    <p>Name:${way.name}</p>
-    <p>Type:${way.type}</p>
-    <p>Eggs:${way.egg}</p>
-    <p>Height:${way.size['height']}</p>
-    <p>Weight:${way.size['weight']}</p>
-    <p>Weaknesses:${way.weaknesses}</p>
-    Pre evolution:${way.evolution["prev-evolution"] ? way.evolution['prev-evolution'][0].name : "no hay evolucion"}<br>
-    Next evolution:${way.evolution['next-evolution'] ? way.evolution['next-evolution'][0].name : "no hay evolucion"}
+    <p>Nombre:${way.name}</p>
+    <p>Tipo:${way.type}</p>
+    <p>Huevos:${way.egg}</p>
+    <p>Altura:${way.size['height']}</p>
+    <p>Peso:${way.size['weight']}</p>
+    <p>Debilidades:${way.weaknesses}</p>
+    Pre evolucion:${way.evolution["prev-evolution"] ? way.evolution['prev-evolution'][0].name : "no hay evolucion"}<br>
+    Siguiente evolucion:${way.evolution['next-evolution'] ? way.evolution['next-evolution'][0].name : "no hay evolucion"}
     <p>Generation:${way.generation['name']}</p>
     </div>`
 let modal = document.getElementById("detalles");
@@ -118,14 +119,14 @@ document.getElementById("name-pokemon").oninput = () => {
     imageHtml(searched)
     loadModal()
     clearForName()
-    console.log(searched);
+ //   console.log(searched);
 }
 document.getElementById("filter-type").onchange = () => {
     const htmlCards = document.getElementById("div-pokes")
     htmlCards.innerHTML = ""
     const filterType = document.getElementById("filter-type").value;
     const filtered = selectFilter(data.pokemon, filterType)
-    console.log(filtered,2);
+  //  console.log(filtered,2);
     imageHtml(filtered)
     loadModal()
     clearForType()
@@ -152,7 +153,7 @@ document.getElementById("order-search").onchange = () => {
     const htmlCards = document.getElementById("div-pokes")
     htmlCards.innerHTML = ""
     const searchOrder = document.getElementById("order-search").value
-    console.log(searchOrder);
+    //console.log(searchOrder);
     const ordered = orderPokes(data.pokemon, searchOrder)
     imageHtml(ordered)
     loadModal()

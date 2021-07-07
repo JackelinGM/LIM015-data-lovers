@@ -1,26 +1,38 @@
 *{
     margin: 0 ;
 }
-
-@media screen and
-(min-width:700px){
+html {
+    scroll-behavior: smooth;
+}
+@media screen and (min-width:700px) {
     nav ul{
         display:flex;
         justify-content: space-around;
     }
+    detalles {
+        width: 50%;
+        height: auto;
+    }
 }
 
+
+body {
+    background: url(imagen/fondo2.PNG);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* navegador*/
 
 .menu-font-std ul{
     list-style:none;
     display:flex;
-    background-color: rgb(10, 10, 10);
+    background-color: #6EA4BB;
 }
 
 h1 {
-    color: rgb(243, 206, 39);
-    background-color: rgb(10, 10, 10);
+    color: whitesmoke;
+    background-color: #6EA4BB;
     text-align: center;
     font-family:fantasy;
     padding: 2px;
@@ -33,7 +45,7 @@ h1 {
 }
 
 .menu-font-std li:hover{
-    background:rgb(251, 255, 35);
+    background: whitesmoke;
     border-color: solid 1em black;
     font-family:fantasy;
     cursor:pointer;
@@ -42,7 +54,7 @@ h1 {
 .menu-font-std li a{
     display:block;
     padding:15px 20px;
-    color:rgb(243, 206, 39);
+    color:#E7E7E6;
     font-family:fantasy;
     font-weight:normal;
 }
@@ -61,18 +73,17 @@ h1 {
     font-family: 'Lucida Sans Unicode';
     margin: 20px 0px 0px 20px;
     border:0.3em solid;
-    border-color: #f5f5f580;
+    border-color: #6EA4BB;
 }
 
 /* contenedores de index e inicio*/
 
-.backgray,.contenedor  {
-    background-color: #f5f5f580;
+.backgray, .contenedor  {
+    background-color: #6EA4BB;
 }
 
 .contenedor {
     width: 40vw;
-    height: 40vh;
     border-radius: 20px;
     margin: 20px 20px 20px 20px;
     margin-inline: 25%;
@@ -80,7 +91,11 @@ h1 {
     padding: 60px;
     align-content: space-between;
     display: block;
+    color: white;
+    font-family: monospace;
+    font-size: 16px;
 }
+
 
 .btn-go {
     width: auto;
@@ -101,7 +116,7 @@ h1 {
 .button:hover, .btn-go:hover {
     text-decoration: none;
     color: #4769ff;
-    background-color: #f5f5f5cc;
+    background-color: #f11010cc;
     transform: scale(1.08);
 }
 
@@ -123,6 +138,27 @@ h1 {
     padding: 20px;
 }
 
+.pokes-img {
+    width: 70%;
+    height: auto;
+    align-content: center;
+}
+
+/* .column-modal backgray {
+    font-family: monospace;
+    color: tomato;
+} */
+
+.extras {
+    font-family: arial;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(17, 16, 16);
+    background-color: #cadce4;
+    width: 325px;
+    height: 520px;
+}
+
 .column, .column-modal {
     align-content: center;
     margin: 10px;
@@ -141,7 +177,9 @@ h1 {
 }
 
 .column-modal {
-    width: 270px;
+    width: 280px;
+    height: 420px;
+    background: white;
 }
 
 .column:hover, .column-modal:hover {
@@ -154,9 +192,10 @@ h1 {
 .numePoke {
     margin: 0;
     font-size: 1em;
-    background-color: rgb(238, 255, 0);
+    background-color: rgba(85, 92, 99, 0.952);
     width: 22%;
     margin-right: auto;
+    color: white;
     border-radius: 0.4em;
 }
 
@@ -164,10 +203,47 @@ h1 {
     text-transform: capitalize;
     font-size: 1.2em;
     text-align: center;
-    background-color: rgb(238, 255, 0);
+    background-color: rgba(85, 92, 99, 0.952);
     border-radius: 0.4em;
-    color: rgb(2, 0, 124);
+    color: rgb(246, 246, 255);
     margin: 0.5em;
+}
+
+
+.detalles {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    padding-top: 56px;
+    padding-left: 500px;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+
+.detalles-content {
+    padding: 20px;
+    width: 325px;
+    height: 520px;
+    background: #a292ad  ;
+    border: 2px solid #877196 ;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaaaaa;
+    height: auto;
+    width: auto;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+}
+
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /*footer*/
@@ -178,8 +254,8 @@ h1 {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color:black;
-    color: rgb(243, 206, 39);
+    background-color:#6EA4BB;
+    color: white;
     text-align: center;
     padding: 10px;
 }
@@ -190,8 +266,8 @@ h1 {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color:black;
-    color: rgb(243, 206, 39);
+    background-color:#6EA4BB;
+    color: white;
     text-align: center;
     padding: 10px;
 }
