@@ -1,7 +1,8 @@
+
 export const selectName = (data,name) =>
 (data.filter(search => search.name.toUpperCase().includes(name.toUpperCase())))
-  
-export const selectFilter = (data,filterType) => 
+
+export const selectFilter = (data,filterType) =>
 (data.filter(search=> search.type.includes(filterType)))
 
 export const calc =(data, filterType)=> {
@@ -33,3 +34,9 @@ export const orderPokes = (data, order) => {
       return data.sort((a, b) => orderZA(a, b)).reverse();
   }
 }
+
+
+
+
+
+

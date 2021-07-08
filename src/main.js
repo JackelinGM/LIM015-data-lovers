@@ -51,7 +51,6 @@ for (const pokemon of pokemons) {
 }
 loadModal();
 
-
 const openModal = (index) => {
 const way = data.pokemon.find(pokemon => pokemon.num== index)
 //console.log(way);
