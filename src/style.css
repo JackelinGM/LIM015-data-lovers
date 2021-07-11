@@ -29,6 +29,13 @@ body {
     display:flex;
     background-color: #6EA4BB;
 }
+.calc-area {
+    border-radius: 10px;
+    padding: 5px;
+    position: absolute;
+    top: 150px;
+    margin: 4px;
+}
 
 h1 {
     color: whitesmoke;
@@ -88,7 +95,7 @@ h1 {
     background-color: #6EA4BB;
 }
 
-.contenedor{
+.contenedor {
     width: 40vw;
     border-radius: 20px;
     margin: 20px 20px 20px 20px;
@@ -113,9 +120,8 @@ h1 {
 }
 
 .btn-top {
-    bottom: 40px;
-    right: 40px;
-    border: rgb(15, 32, 32);
+    bottom: 20px;
+    right: 20px;
     display: none;
     position: fixed;
 }
@@ -251,14 +257,6 @@ h1 {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-}
-
-.calc-area {
-    border-radius: 5px;
-    font-family: 'Lucida Sans Unicode';
-    color: black;
-    background-color: rgba(227, 234, 241, 0.712);
-    margin-left: 0%;
 }
 
 /*footer*/

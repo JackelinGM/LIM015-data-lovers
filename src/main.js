@@ -136,7 +136,7 @@ document.getElementById("filter-type").onchange = () => {
 const percent = () => {
     const filterType = document.getElementById("filter-type").value;
     const result = calc(data.pokemon, filterType)
-    document.getElementById("div-calc").innerHTML = `Tenemos ${result} % de pokemon de ese tipo .`
+    document.getElementById("div-calc").innerHTML = `Tenemos ${result} % de pokemon de ese tipo.`
 }
 
 document.getElementById("filter-weakness").onchange = () => {
