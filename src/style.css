@@ -29,7 +29,15 @@ body {
     display:flex;
     background-color: #6EA4BB;
 }
-
+.calc-area {
+    border-radius: 10px;
+    padding: 5px;
+    position: fixed;
+    top: 150px;
+    margin: 10px;
+    margin-left: -120px;
+    
+}
 h1 {
     color: whitesmoke;
     background-color: #6EA4BB;
