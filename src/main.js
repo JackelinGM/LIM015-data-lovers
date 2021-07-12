@@ -12,15 +12,16 @@ document.getElementById("home").onclick = () => (window.open("index.html", "_sel
 document.getElementById("play").onclick = () => (window.open("https://www.pokemongo.com/es-la/"));
 
 //funcion para los cards,llamando a imagenen name numero y size
-function pokemonImage(idPoke, arrayPoke) {
-    const way = arrayPoke[idPoke];
+function pokemonImage(numPoke, arrayPoke) {
+    const way = arrayPoke[numPoke];
   //  console.log(way,'pokemon');
     let box = `
         <div class="column pokemon backgray" id="pokemon${way.num}" data-id="${way.num}" >
         <p class="numePoke">${way.num}</p>
+        <p class="genPoke">${way.generation['name']}</p>
         <img class="pokes-img" src=${way.img}>
         <p class="namePoke">${way.name}</p>
-        <p class="sizePoke">${way.size['height']}</p>
+        <p class="namePoke">CP: ${way.stats['max-cp']}</p>
         </div>
 `;
     return box;
@@ -57,7 +58,7 @@ const way = data.pokemon.find(pokemon => pokemon.num== index)
 // class="column-modal backgray" por class="extras"
 let box2 = `
     <div class="extras" >
-    <img src=${way.img}>
+    <img class="pokes-img2" src=${way.img}>
     <p>Nombre:${way.name}</p>
     <p>Tipo:${way.type}</p>
     <p>Huevos:${way.egg}</p>
@@ -136,7 +137,7 @@ document.getElementById("filter-type").onchange = () => {
 const percent = () => {
     const filterType = document.getElementById("filter-type").value;
     const result = calc(data.pokemon, filterType)
-    document.getElementById("div-calc").innerHTML = `Tenemos ${result} % de pokemon de ese tipo .`
+    document.getElementById("div-calc").innerHTML = `Tenemos ${result} % de pokemon de ese tipo.`
 }
 
 document.getElementById("filter-weakness").onchange = () => {
@@ -148,6 +149,7 @@ document.getElementById("filter-weakness").onchange = () => {
     loadModal()
     clearForWeakness()
 }
+
 
 document.getElementById("order-search").onchange = () => {
     const htmlCards = document.getElementById("div-pokes")
