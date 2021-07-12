@@ -6,13 +6,16 @@ const pokemonMock = {
     "type": [
       "Grass",
       "Poison"
-      
     ],
-    "size":{
-      "height": "0.71 m",
+
+    "stats":{
+      "max-cp": "1115",
     },
-  
-    "spawn_chance": 0.69,
+
+    "generation": {
+      "name": "kanto"
+    },
+
     "weaknesses": [
       "Fire",
       "Ice",
@@ -26,11 +29,14 @@ const pokemonMock = {
       "Grass",
       "Poison"
     ],
-    "size":{
-      "height": "0.99 m",
+    "stats":{
+      "max-cp": "1699",
     },
-    
-    "spawn_chance": 0.042,
+
+    "generation": {
+      "name": "kanto"
+    },
+
     "weaknesses": [
       "Fire",
       "Ice",
@@ -43,11 +49,14 @@ const pokemonMock = {
     "type": [
       "Water"
     ],
-    "size":{
-      "height": "0.51 m", 
+    "stats":{
+      "max-cp": "946",
     },
-    
-    "spawn_chance": 0.58,
+
+    "generation": {
+      "name": "kanto"
+    },
+
     "weaknesses": [
       "Electric",
       "Grass"
@@ -100,51 +109,23 @@ describe('Selecting a pokemon by order', () => {
   });
   it('should return "Bulbasaur", "Ivysaur" and "Squirtle" by "A-Z" order', () => {
     const result = orderPokes(pokemonMock.pokemon, "order-az")
-    //console.log(result,"lenght");
+    // console.log(result,"lenght");
     expect(result).toEqual(pokemonMock.pokemon)
   });
   it('should return "Squirtle", "Ivysaur" and "Bulbasaur" by "Z-A" order', () => {
     const result = orderPokes(pokemonMock.pokemon, "order-za")
     expect(result).toEqual(pokemonMock.pokemon)
   });
-  it('should return "Squirtle", "Bulbasaur" and "Ivysaur" by "SIZE" order', () => {
-    const result = orderPokes(pokemonMock.pokemon, "size")
+  it('should return "Squirtle", "Bulbasaur" and "Ivysaur" by "stats" order', () => {
+    const result = orderPokes(pokemonMock.pokemon, "stats")
     expect(result).toEqual(pokemonMock.pokemon)
   });
-  it('should return "Ivysaur","Bulbasaur" and "Squirtle" by "SIZE-REVERSE" order', () => {
-    const result = orderPokes(pokemonMock.pokemon, "size-reverse")
+  it('should return "Ivysaur","Bulbasaur" and "Squirtle" by "stats-reverse" order', () => {
+    const result = orderPokes(pokemonMock.pokemon, "stats-reverse")
     expect(result).toEqual(pokemonMock.pokemon)
   });
-  it('should return "Bulbasaur" ,"Squirtle" and "Ivysaur" by "ORDER-SPAWN" order', () => {
-    const result = orderPokes(pokemonMock.pokemon, "order-spawn")
+  it('should return "Bulbasaur" ,"Squirtle" and "Ivysaur" by "order-generation" order', () => {
+    const result = orderPokes(pokemonMock.pokemon, "order-generation")
     expect(result).toEqual(pokemonMock.pokemon)
   });
 })
-
-
-
-
-
-
-
-
-//describe('example', () => {
-  //it('is a function', () => {
-   // expect(typeof example).toBe('function');
-  //});
-
-  //it('returns `example`', () => {
-   // expect(example()).toBe('example');
-  //});
-//});
-
-
-//describe('anotherExample', () => {
-  //it('is a function', () => {
-    //expect(typeof anotherExample).toBe('function');
-  //});
-
-  //it('returns `anotherExample`', () => {
-  //  expect(anotherExample()).toBe('OMG');
-  //});
-//});
