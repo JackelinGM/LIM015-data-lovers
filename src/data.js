@@ -15,19 +15,19 @@ export const selectWeak = (data, weakFilter) =>
 
 const orderAZ = (a, b) => (a["name"]).localeCompare(b["name"])
 const orderZA = (a, b) => (a["name"]).localeCompare(b["name"])
-const orderByHeight = (a, b) => Number(a.size["height"].split(" ")[0]) - Number(b.size["height"].split(" ")[0])
+const orderByStats = (a, b) => Number(a.stats["max-cp"].split(" ")[0]) - Number(b.stats["max-cp"].split(" ")[0])
 
-const orderSpawnChance = (a, b) => Number(a["spawn_chance"]) - Number(b["spawn_chance"])
+const orderGeneration = (a, b) => Number(a.generation["name"].split(" ")[0]) - Number(b.generation["name"].split(" ")[0])
+
 export const orderPokes = (data, order) => {
-  
   switch (order) {
-    case "size":
+    case "stats":
       //console.log(data);
-      return data.sort((a, b) => orderByHeight(a, b))
-    case "size-reverse":
-      return data.sort((a, b) => orderByHeight(a, b)).reverse();
-    case "order-spawn":
-      return data.sort((a, b) => orderSpawnChance(a, b)).reverse();
+      return data.sort((a, b) => orderByStats(a, b))
+    case "stats-reverse":
+      return data.sort((a, b) => orderByStats(a, b)).reverse();
+    case "order-generation":
+      return data.sort((a, b) => orderGeneration(a, b));
     case "order-az":
       return data.sort((a, b) => orderAZ(a, b))
     case "order-za":

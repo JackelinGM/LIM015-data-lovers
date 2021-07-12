@@ -222,6 +222,15 @@ h1 {
     margin: 0.5em;
 }
 
+.genPoke {
+    text-transform: capitalize;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: rgba(236, 80, 53, 0.952);
+    border-radius: 0.4em;
+    color: rgb(254, 255, 251);
+    margin: 0.5em;
+}
 
 .detalles {
     display: none;
