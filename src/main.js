@@ -12,8 +12,8 @@ document.getElementById("home").onclick = () => (window.open("index.html", "_sel
 document.getElementById("play").onclick = () => (window.open("https://www.pokemongo.com/es-la/"));
 
 //funcion para los cards,llamando a imagenen name numero y size
-function pokemonImage(idPoke, arrayPoke) {
-    const way = arrayPoke[idPoke];
+function pokemonImage(numPoke, arrayPoke) {
+    const way = arrayPoke[numPoke];
   //  console.log(way,'pokemon');
     let box = `
         <div class="column pokemon backgray" id="pokemon${way.num}" data-id="${way.num}" >
