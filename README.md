@@ -134,6 +134,11 @@ papel dibujar
 
 ![](src/img/historia2.jpg)
 
+#### Prototipo final
+
+![](src/img/inicio.png)
+
+![](src/img/index.png)
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 

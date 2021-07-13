@@ -34,9 +34,8 @@ body {
     border-radius: 10px;
     padding: 5px;
     position: absolute;
-    top: 150px;
+    top: 197px;
     margin: 4px;
-    background: #FDBEF2;
 }
 
 .logo1 {
@@ -45,6 +44,18 @@ body {
 
 .logo2 {
     width: 100%;
+}
+
+.name-search, .filter-type , .filter-weakness , .order-search {
+    color: black;
+    font-size: 15px;
+    font-family: monospace;
+}
+
+.name-pokemon, .filter-type-select , .filter-weakness-select , .order-search {
+    color: black;
+    font-size: 15px;
+    font-family: monospace;
 }
 
 h1 {
