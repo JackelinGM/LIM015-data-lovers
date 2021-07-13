@@ -16,7 +16,7 @@ function pokemonImage(numPoke, arrayPoke) {
     const way = arrayPoke[numPoke];
   //  console.log(way,'pokemon');
     let box = `
-        <div class="column pokemon backgray" id="pokemon${way.num}" data-id="${way.num}" >
+        <div class="column pokemon backgray" id="pokemon${way.num}" data-num="${way.num}" >
         <p class="numePoke">${way.num}</p>
         <p class="genPoke">${way.generation['name']}</p>
         <img class="pokes-img" src=${way.img}>
@@ -44,7 +44,7 @@ const pokemons = document.getElementsByClassName("pokemon");
 const loadModal = () => {
 for (const pokemon of pokemons) {
     pokemon.onclick = () => {
-    const id = pokemon.getAttribute("data-id");
+    const id = pokemon.getAttribute("data-num");
     //console.log(id);
     openModal(id)
     };
