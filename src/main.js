@@ -36,7 +36,7 @@ htmlCards += pokemonImage(i, arrayPoke)
     document.getElementById("div-pokes").innerHTML += htmlCards;
 }
 
-imageHtml(data.pokemon);
+imageHtml(data.pokemon)
 
 
 //abrir modal
@@ -58,7 +58,7 @@ const way = data.pokemon.find(pokemon => pokemon.num== index)
 // class="column-modal backgray" por class="extras"
 let box2 = `
     <div class="extras" >
-    <img class="pokes-img2" src=${way.img}>
+    <img src=${way.img}>
     <p>Nombre:${way.name}</p>
     <p>Tipo:${way.type}</p>
     <p>Huevos:${way.egg}</p>
@@ -137,7 +137,7 @@ document.getElementById("filter-type").onchange = () => {
 const percent = () => {
     const filterType = document.getElementById("filter-type").value;
     const result = calc(data.pokemon, filterType)
-    document.getElementById("div-calc").innerHTML = `Tenemos ${result} % de pokemon de ese tipo.`
+    document.getElementById("div-calc").innerHTML = `Tenemos ${result} % de pokemon de ese tipo .`
 }
 
 document.getElementById("filter-weakness").onchange = () => {
@@ -149,7 +149,6 @@ document.getElementById("filter-weakness").onchange = () => {
     loadModal()
     clearForWeakness()
 }
-
 
 document.getElementById("order-search").onchange = () => {
     const htmlCards = document.getElementById("div-pokes")
