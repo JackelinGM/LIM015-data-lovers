@@ -120,7 +120,7 @@ filtrarla, ordenarla y hacer algún cálculo agregado.
 
 #### Prototipo de baja fidelidad
 
-papel dibujar
+![](src/img/boceto-bajafidelidad.jpeg)
 
 #### Testeos de usabilidad
 
