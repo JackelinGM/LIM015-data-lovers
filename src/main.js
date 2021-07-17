@@ -69,6 +69,7 @@ let box2 = `
     Siguiente evolucion:${way.evolution['next-evolution'] ? way.evolution['next-evolution'][0].name : "no hay evolucion"}
     <p>Generation:${way.generation['name']}</p>
     </section>`
+
 let modal = document.getElementById("detalles");
 let span = document.getElementsByClassName("close")[0];
 modal.style.display = "block";
