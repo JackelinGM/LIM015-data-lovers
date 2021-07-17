@@ -16,13 +16,13 @@ function pokemonImage(numPoke, arrayPoke) {
     const way = arrayPoke[numPoke];
   //  console.log(way,'pokemon');
     let box = `
-        <div class="column pokemon backgray" id="pokemon${way.num}" data-num="${way.num}" >
+        <section class="column pokemon backgray" id="pokemon${way.num}" data-num="${way.num}" >
         <p class="numePoke">${way.num}</p>
         <p class="genPoke">${way.generation['name']}</p>
         <img class="pokes-img" src=${way.img}>
         <p class="namePoke">${way.name}</p>
         <p class="namePoke">CP: ${way.stats['max-cp']}</p>
-        </div>
+        </section>
 `;
     return box;
 }
@@ -36,7 +36,7 @@ htmlCards += pokemonImage(i, arrayPoke)
     document.getElementById("div-pokes").innerHTML += htmlCards;
 }
 
-imageHtml(data.pokemon);
+imageHtml(data.pokemon)
 
 
 //abrir modal
@@ -57,8 +57,8 @@ const way = data.pokemon.find(pokemon => pokemon.num== index)
 //console.log(way);
 // class="column-modal backgray" por class="extras"
 let box2 = `
-    <div class="extras" >
-    <img class="pokes-img2" src=${way.img}>
+    <section class="extras" >
+    <img src=${way.img}>
     <p>Nombre:${way.name}</p>
     <p>Tipo:${way.type}</p>
     <p>Huevos:${way.egg}</p>
@@ -68,7 +68,7 @@ let box2 = `
     Pre evolucion:${way.evolution["prev-evolution"] ? way.evolution['prev-evolution'][0].name : "no hay evolucion"}<br>
     Siguiente evolucion:${way.evolution['next-evolution'] ? way.evolution['next-evolution'][0].name : "no hay evolucion"}
     <p>Generation:${way.generation['name']}</p>
-    </div>`
+    </section>`
 let modal = document.getElementById("detalles");
 let span = document.getElementsByClassName("close")[0];
 modal.style.display = "block";
@@ -137,7 +137,7 @@ document.getElementById("filter-type").onchange = () => {
 const percent = () => {
     const filterType = document.getElementById("filter-type").value;
     const result = calc(data.pokemon, filterType)
-    document.getElementById("div-calc").innerHTML = `Tenemos ${result} % de pokemon de ese tipo.`
+    document.getElementById("div-calc").innerHTML = `Tenemos ${result} % de pokemon de ese tipo .`
 }
 
 document.getElementById("filter-weakness").onchange = () => {
@@ -149,7 +149,6 @@ document.getElementById("filter-weakness").onchange = () => {
     loadModal()
     clearForWeakness()
 }
-
 
 document.getElementById("order-search").onchange = () => {
     const htmlCards = document.getElementById("div-pokes")
